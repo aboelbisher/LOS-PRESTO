@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.mef.app.MefMain" activate="activate" deactivate="deactivate">
+    <implementation class="org.mef.app.MefMain"/>
+    <service servicefactory="false">
+        <provide interface="org.mef.app.MefService"/>
+    </service>
+    <property name="service.pid" value="org.mef.app.MefMain"/>
+    <reference name="topologyService" interface="org.onosproject.net.topology.TopologyService" cardinality="1..1" policy="static" bind="bindTopologyService" unbind="unbindTopologyService"/>
+</scr:component>

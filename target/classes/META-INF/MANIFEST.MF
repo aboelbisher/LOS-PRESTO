@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1500222838026
+Build-Jdk: 1.8.0_131
+Built-By: Aboelbisher
+Bundle-ClassPath: WEB-INF/classes
+Bundle-Description: ONOS OSGi API bundle archetype
+Bundle-ManifestVersion: 2
+Bundle-Name: mef-app
+Bundle-SymbolicName: org.mef.mef-app
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.mef.app;uses:="javax.ws.rs,javax.ws.rs.core,org.mef.
+ app.TapiTopology,org.onlab.rest,org.onosproject.net.topology,org.onospr
+ oject.rest";version="1.0.0",org.mef.app.TapiTopology;uses:="com.eclipse
+ source.json";version="1.0.0"
+Import-Package: com.eclipsesource.json;version="[0.9,1)",com.fasterxml.j
+ ackson.databind;version="[2.8,3)",com.fasterxml.jackson.databind.node;v
+ ersion="[2.8,3)",javax.ws.rs;version="[2.0,3)",javax.ws.rs.core;version
+ ="[2.0,3)",org.mef.app.TapiTopology,org.onlab.rest;version="[1.11,2)",o
+ rg.onosproject.net.topology;version="[1.11,2)",org.onosproject.rest;ver
+ sion="[1.11,2)",org.slf4j;version="[1.6,2)",org.glassfish.jersey.servle
+ t;version="[2.25,3)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.mef.app.MefMain.xml,OSGI-INF/org.mef.app
+ .ApiDocRegistrator.xml
+Tool: Bnd-3.0.0.201509101326
+Web-ContextPath: /onos/mef-app
